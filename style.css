@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url('https://sudubesi.com/wp-content/uploads/2020/05/Notora-Free-Fire.png') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.iwan-contener {
+    position: relative;
+    width: 400px;
+    min-height: 100vh;
+    border:1px solid gold;
+    background: #333;
+    padding: 80px 10px 50px 10px;
+}
+
+.iwan-contener header {
+    position: fixed;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 70px;
+    background: url('https://i02.appmifile.com/384_bbs_en/13/06/2020/8630f4b3e5.jpg') no-repeat;
+    background-size: 100%;
+    background-position: 0 50%;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border:1px solid #fff;
+    border-top:none;
+    z-index: 999;
+    box-shadow: 0 .5px 5px gold
+}
+.iwan-contener header:before {
+    content: '';
+    width: 46px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -50.7px;
+    background: gold;
+    border-bottom-right-radius: 2px;
+    border:1px solid #fff;
+    border-left: none;
+    border-top:none;
+    box-shadow: 0 .5px 5px gold
+}
+
+.iwan-contener header:after {
+    content: '';
+    width: 46px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -50.7px;
+    background: gold;
+    border-bottom-left-radius: 2px;
+    border:1px solid #fff;
+    border-right: none;
+    border-top:none;
+    box-shadow: 0 .5px 5px gold
+}
+.iwan-contener .banner
+{
+	position: relative;
+	width: 100%;
+	height: 210px;
+	overflow: hidden;
+	border:1px solid #fff;
+	border-radius: 2px;
+	box-shadow: 0 .5px 5px gold
+}
+.iwan-contener .banner img
+{
+	width: 100%;
+}
+
+.iwan-contener .wrap
+{
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 400px;
+	background: url('https://cdn.idntimes.com/content-images/post/20190718/044-9eb03088f4676c58c47ce66514766c56.jpg') no-repeat;
+	border:1px solid #fff;
+	background-position: 50% 0;
+	box-shadow: 0 .5px 5px gold;
+	border-radius: 2px;
+	overflow: hidden;
+}
+.iwan-contener .wrap:before
+{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.50);
+}
+.iwan-contener .wrap .spin
+{
+	position: relative;
+	width: 260px;
+	height: 260px;
+}
+.iwan-contener .wrap .spin .box
+{
+	position: absolute;
+	top:70px;
+	left: 54px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: rotate(calc(45deg * var(--i)));
+	transition: all ease 10s;
+	z-index: 9;
+}
+.iwan-contener .wrap .spin .box .kotak
+{
+	position: absolute;
+	top:0;
+	left: calc(50% * 30px);
+	width: 70px;
+	height: 70px;
+	display: block;
+	border-radius: 5px;
+	background: #333;
+	z-index: 99;
+	transform: rotate(315deg);
+}
+.kotak svg, .kotak svg rect
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+	z-index: 99999999;
+	border-radius: 1px;
+	animation: stroke 2s infinite linear;
+}
+.kotak svg rect
+{
+	stroke-width:7;
+	stroke: gold;
+	stroke-dasharray: 50;
+	animation: stroke 2s infinite linear;
+}
+@keyframes stroke 
+{
+	from 
+	{
+		stroke-dashoffset:400;
+		filter: hue-rotate(0);
+	}
+	to 
+	{
+		stroke-dashoffset:00;
+		filter: hue-rotate(360deg);
+	}
+}
+.iwan-contener .wrap .spin .box .kotak:before
+{
+	content: '';
+	position: absolute;
+	top:-3.5px;
+	left:-3.5px;
+	width: 75px;
+	height: 75px;
+	background: #333;
+	border-radius: 4px;
+	z-index: 9;
+	border: 1px solid #fff;
+}
+
+.iwan-contener .wrap .spin .box .kotak:after
+{
+	content: '';
+	position: absolute;
+	top:-4px;
+	left:-4px;
+	width:80px;
+	height:80px;
+	background: #333;
+	filter: blur(5px);
+	border-radius: 4px;
+	z-index: -9;
+	border: 1px solid #fff;
+}
+.iwan-contener .wrap .spin .arrow
+{
+	position: absolute;
+	top:70px;
+	left: 54px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	transform: rotate(45deg);
+	transition: all ease 10s;
+	z-index: 5;
+}
+.iwan-contener .wrap .spin .arrow.active
+{
+	animation: hue 2s infinite linear;
+}
+@keyframes hue 
+{
+	from 
+	{
+		filter:hue-rotate(0deg);
+	}
+	to 
+	{
+		filter:hue-rotate(360deg);
+	}
+}
+.iwan-contener .wrap .spin .arrow:before
+{
+	content: '';
+	position: absolute;
+	top:0;
+	left: calc(50% * 30px);
+	width: 70px;
+	height: 70px;
+	display: block;
+	border-radius: 5px;
+	box-shadow: 0 .5px 15px gold,
+				0 .5px 20px red,
+				0 .5px 25px aqua,
+				0 .5px 30px gold;
+	background: transparent;
+	z-index: 1;
+	transform: rotate(45deg);
+}
+.iwan-contener .wrap .putar
+{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 90px;
+	height: 90px;
+	background: gold;
+	border-radius: 50%;
+	z-index: 999;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 0.5px 10px gold;
+}
+.iwan-contener .wrap .putar.disabled
+{
+	pointer-events: none;
+}
+.iwan-contener .wrap .tengah
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	z-index: 999999;
+	box-shadow: -10px -10px 15px rgba(255,255,255,.1),
+				10px 10px 10px rgba(0,0,0,.1),
+				inset -10px -10px 15px rgba(255,255,255,.1),
+				inset 10px 10px 10px rgba(0,0,0,.1);
+	pointer-events: none;
+}
+.iwan-contener .wrap .tengah span
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: linear-gradient(#14ff9e,#ffeb3b,#ff00e0);
+	z-index: -1;
+	animation: rotate .5s infinite linear;
+}
+.iwan-contener .wrap .tengah:before
+{
+	content: 'SPIN';
+	position: absolute;
+	top:10px;
+	left:20px;
+	font-family: 'Chakra Petch';
+	right:10px;
+	bottom:10px;
+	border-radius: 50%;
+	background: #333;
+	color:#fff;
+	z-index: 9;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	box-shadow: inset -10px -10px 15px rgba(0,0,0,.1),
+				inset 10px 10px 10px rgba(225,225,225,.1);
+}
+@keyframes rotate 
+{
+	from 
+	{
+		transform: rotate(0deg);
+	}
+	to 
+	{
+		transform: rotate(360deg);
+	}
+}
+.iwan-contener .wrap .putar:before
+{
+	content: '';
+	position: absolute;
+	top:30%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 15px;
+	height: 100px;
+	background: gold;
+	box-shadow: 0 0.5px 10px gold;
+}
+.iwan-contener .wrap .putar:after
+{
+	content: '';
+	position: absolute;
+	top:-30px;
+	left:50%;
+	transform: translateX(-50%) rotate(45deg);
+	width: 20px;
+	height: 20px;
+	background: gold;
+	box-shadow: 0 0.5px 10px gold;
+}
+.iwan-contener .wrap .spin .box .kotak img
+{
+	position: relative;
+	border-radius: 3px;
+	border:1px solid #333;
+	width: 70px;
+	height: 70px;
+	z-index: 99;
+}
+.iwan-contener footer
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: gold;
+	padding: 10px 5px 10px 5px;
+	width: 400px;
+	text-align: center;
+	font-family: 'Chakra Petch';
+	border-top:1px solid #fff;
+	color:#fff;
+	text-shadow: 0 0.5px 5px #333;
+	box-shadow: 0 0.5px 10px gold;
+}
+.iwan-contener .pop-hadiah
+{
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 250px;
+	height: 250px;
+	background: url('https://cdn.idntimes.com/content-images/post/20190718/044-9eb03088f4676c58c47ce66514766c56.jpg') no-repeat;
+	background-size: cover;
+	border:1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 10px gold;
+	z-index: 9999999;
+	display:none;
+}
+.iwan-contener .pop-hadiah:before
+{
+	content: 'Konfirmasi Hadiah';
+	text-align: center;
+	line-height: 30px;
+	font-family: 'Chakra Petch';
+	color:#fff;
+	text-shadow: 0 0.5px 2px #333;
+	font-size: 15px;
+	position: absolute;
+	top:-20px;
+	left:50%;
+	transform: translateX(-50%);
+	width: 180px;
+	height: 40px;
+	background: #333;
+	border: 1px solid #fff;
+	border-radius: 3px;
+}
+.iwan-contener .pop-hadiah:after
+{
+	content: 'Apakah anda sudah yakin?';
+	text-align: center;
+	line-height: 20px;
+	font-family: 'Chakra Petch';
+	color:#fff;
+	text-shadow: 0 0.5px 2px #333;
+	font-size: 10px;
+	position: absolute;
+	top:10px;
+	left:50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 20px;
+	background: #333;
+	border: 1px solid #fff;
+	border-radius: 3px;
+}
+.iwan-contener .pop-hadiah .imBox
+{
+	position: absolute;
+	top:45%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 90px;
+	height: 110px;
+	background: gold;
+	border:1px solid #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0.5px 10px gold;
+}
+.iwan-contener .pop-hadiah .confirm
+{
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	bottom:20px;
+	width: 200px;
+	height: 40px;
+	display: flex;
+	padding: 5px;
+	align-items: center;
+	justify-content: space-around;
+}
+.iwan-contener .pop-hadiah .confirm button
+{
+	padding: 5px 10px 5px 10px;
+	width: 80px;
+	background: #333;
+	border:1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 10px gold;
+	color:#fff;
+	font-family: 'Chakra Petch';
+}
+.iwan-contener .pop-hadiah .confirm button:focus
+{
+	outline: none;
+}
+.iwan-contener .pop-hadiah .imBox img
+{
+	border-radius: 3px;
+	position: relative;
+	width: 88px;
+	height: 108px;
+}
+
+
+.iwan-contener .login
+{
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 250px;
+	height: 120px;
+	background: url('https://cdn.idntimes.com/content-images/post/20190718/044-9eb03088f4676c58c47ce66514766c56.jpg') no-repeat;
+	background-size: cover;
+	border:1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 10px gold;
+	z-index: 9999999;
+	display:none;
+}
+.iwan-contener .login:before
+{
+	content: 'Anda Harus Login Dulu';
+	text-align: center;
+	font-family: 'Chakra Petch';
+	color:#fff;
+	text-shadow: 0 0.5px 2px #333;
+	font-size: 13px;
+	line-height: 20px;
+	position: absolute;
+	top:-10px;
+	left:50%;
+	transform: translateX(-50%);
+	width: 180px;
+	height: 20px;
+	background: #333;
+	border: 1px solid #fff;
+	border-radius: 3px;
+}
+
+.iwan-contener .login .fb
+{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	width: 200px;
+	background: #3b5998;
+	height: 35px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 10px gold;
+	text-align: center;
+	line-height: 33px;
+	font-family: 'Chakra Petch';
+	color:#fff;
+	font-size: 13px;
+	user-select: none;
+	padding-left: 10px;
+}
+.iwan-contener .login .fb .fab
+{
+	float: left;
+	margin-top: 10px;
+	transform: scale(1.8);
+}
+.mask
+{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.50);
+	z-index: 999999;
+	display:none;
+}
+/* FORM */
+.iwan-contener .wrap .form
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.iwan-contener .wrap .form .title
+{
+	position: relative;
+	width: 250px;
+	padding: 10px 5px 10px 5px;
+	background: #333;
+	border:1px solid #fff;
+	border-radius: 3px;
+	color:#fff;
+	font-family: 'Chakra Petch';
+	text-align: center;
+	font-size: 16px;
+}
+.iwan-contener .wrap .form .title:before
+{
+	content: '';
+	position: absolute;
+	top:-1px;
+	left: -19px;
+	width: 20px;
+	height: 100%;
+	background: gold;
+	border:1px solid #fff;
+	border-right: none;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.iwan-contener .wrap .form .title:after
+{
+	content: '';
+	position: absolute;
+	top:-1px;
+	right: -19px;
+	width: 20px;
+	height: 100%;
+	background: gold;
+	border:1px solid #fff;
+	border-right: none;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.iwan-contener .wrap .form .form-group
+{
+	position: relative;
+	margin-top: 10px;
+	text-align: center;
+}
+.iwan-contener .wrap .form .form-group:first-child
+{
+	margin-top: 25px;
+}
+.form-group .form-input
+{
+	width: 250px;
+	height: 35px;
+	padding: 5px 10px 5px 10px;
+	background: gold;
+	border:1px solid #fff;
+	box-shadow: 0 .5px 5px gold;
+	outline: none;
+	border-radius: 3px;
+	font-family: 'Chakra Petch';
+}
+.form-group .form-input::placeholder
+{
+	color:black;
+}
+
+.form-group .btn-submit
+{
+	margin-top: 5px;
+	position: relative;
+	width: 80px;
+	height: 35px;
+	background: #333;
+	border:1px solid #fff;
+	border-radius: 3px;
+	color:#fff;
+	font-family: 'Chakra Petch';
+	box-shadow: 0 .5px 5px gold;
+	text-align: center;
+	font-size: 16px;
+}
+.form-group .btn-submit.disabled
+{
+	pointer-events: none;
+	cursor: progress;
+}
+.form-group .btn-submit:before
+{
+	content: '';
+	position: absolute;
+	top:-1px;
+	left: -19px;
+	width: 20px;
+	height: 100%;
+	background: gold;
+	border:1px solid #fff;
+	border-right: none;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.form-group .btn-submit:after
+{
+	content: '';
+	position: absolute;
+	top:-1px;
+	right: -19px;
+	width: 20px;
+	height: 100%;
+	background: gold;
+	border:1px solid #fff;
+	border-right: none;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.iwan-contener .wrap .form .pesan
+{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0 5px 0 5px;
+	font-size: 10px;
+	text-align: center;
+	font-family: 'Chakra Petch';
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+.pesan .fas
+{
+	float: left;
+	margin-top: 1px;
+}
+.pesan.salah
+{
+	width: 190px;
+	display: none;
+	background: red;
+	color:#fff;
+}
+.pesan.checking
+{
+	width: 130px;
+	display: none;
+	background: gold;
+}
+.pesan.semua
+{
+	background: red;
+	color:#fff;
+	display: none;
+}
+
+.iwan-contener .wrap .sukses
+{
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 250px;
+	height: 180px;
+	background: url('https://cdn.idntimes.com/content-images/post/20190718/044-9eb03088f4676c58c47ce66514766c56.jpg') no-repeat;
+	background-size: cover;
+	border:1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 10px gold;
+	z-index: 9999999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+}
+.iwan-contener .wrap .sukses:before
+{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.50);
+}
+.sukses img
+{
+	width: 100px;
+	z-index: 99;
+	color:#fff;
+	font-family: 'Chakra Petch';
+}
+.sukses h1
+{
+	margin-top: 5px;
+	font-size: 15px;
+	text-align: center;
+	z-index: 99;
+	color:#fff;
+	font-family: 'Chakra Petch';
+}
+.sukses p
+{
+	margin-top: 5px;
+	font-size: 9px;
+	z-index: 99;
+	color:#fff;
+	font-family: 'Chakra Petch';
+	text-align: center;
+}
+@media (max-width: 640px)
+{
+	.iwan-contener .wrap .spin .box
+	{
+		left:30px;
+	}
+	.iwan-contener .wrap .spin .arrow
+	{
+		left:30px;
+	}
+}
